@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('example') {
+            steps {
+                echo 'hello world'
+                
+            }
+        }
+        
+    }
+    post {
+        always {
+            echo 'i will always say hello world'
+        }
+    }
+}
